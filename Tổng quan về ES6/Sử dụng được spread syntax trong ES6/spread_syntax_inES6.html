@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  //Bước 1: Before using spread operator
+  // function sum(x, y, z) {
+  //   return x + y + z;
+  // }
+  // const numbers = [1, 2, 3];
+  // console.log(sum.apply(null, numbers));
+
+ // After using spread operator
+ //  function sum(x,y,z){
+ //    return x + y + z;
+ //  }
+ //  const numbers = [1,2,3];
+ //  console.log(sum(...numbers));
+
+  //Bước 2: thực hiện đẩy các phần tử vào trong một mảng.
+  // let a = [1, 2];
+  // a.push([1, 2, 3]);
+  // console.log(a);
+  //Kết quả: [1,2[1,2,3]]
+
+  // Chúng ta có thể sử dụng hàm apply để thực hiện đẩy các phần tử vào mảng theo đúng yêu cầu:
+  // let a = [1, 2];
+  // a.push.apply(a,[1, 2, 3]);
+  // console.log(a);
+  // Kết quả: [1,2,1,2,3] =>ko tối ưu lắm
+
+  // Sử dụng spread syntax
+  // let a = [1,2];
+  // let b = [1,2,3];
+  // a.push(...b);
+  // console.log(a);
+  // Kết quả: [1,2,1,2,3]
+
+  //Bước 3: chúng ta thực hiện sao chép một mảng:
+  // let a = [1,2];
+  // let b = [1,2,3];
+  // a = [...b];
+  // console.log(a);
+  //Kết quả: [1,2,3]
+
+  //Bước 4: chúng ta thực hiện sao chép một đối tượng:
+  // let obj1 = {a:1,b:2};
+  // let obj2 = {...obj1};
+  // console.log(obj2);
+  // kết quả: {a:1,b:2}
+
+  //Bước 5: chúng ta thực hiện nối 2 mảng:
+  // let a = [1,2];
+  // let b = [3,4,5];
+  // let c = [...a,...b];
+  // console.log(c);
+  // kết quả: [1,2,3,4,5]
+</script>
+</body>
+</html>
